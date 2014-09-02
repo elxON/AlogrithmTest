@@ -2,7 +2,7 @@
 //NO.003
 /* 3.求子数组的最大和  */
 // 1, -2, 3, 10, -4, 7, 2, -5
-cur = 0
+/* cur = 0
 sum = 1
 max = 1
 
@@ -13,7 +13,7 @@ sum = 0;
 
 cur = 2;
 sum = 3;
-max = 3;
+max = 3; */
 
 
 int maxSubarray (int a[], int size)

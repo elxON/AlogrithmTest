@@ -1,7 +1,16 @@
 //微软面试一百题系列
 //NO.001
 // 把二元查找树变成排序的双向链表
-
+/* 10
+head NULL tail NULL
+->l 6 head lt
+		->l 4 head lt ->4
+		->r 8 rh tail(lt) ->8
+-> 6  4=6=8 head->4 lt->8
+->r 14 rh tail
+		->l 12 head(rh) lt ->12
+		->r 18 rh tail->18
+-> 14 12=14=18 rh->12 tail->18 */
 //树的节点结构
 struct BSTreeNode
 {
@@ -35,7 +44,7 @@ void helper(BSTreeNode *& head, BSTreeNode *& tail, BSTreeNode root)
 	helper(rh, tail, root->m_pRight);
 	if(lt != NULL)
 	{
-		lt->m_pLeft = root;
+		lt->m_pRight = root;
 		root->m_pLeft = lt;
 	}
 	else
@@ -52,4 +61,6 @@ void helper(BSTreeNode *& head, BSTreeNode *& tail, BSTreeNode root)
 		tail = root;
 	}
 }
+
+
 
